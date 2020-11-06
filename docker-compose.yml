@@ -3,24 +3,24 @@ version: "3.7"
 services:
   elasticsearch_test:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
-  container_name: elasticsearch_test
-  environment:
-    - node.name=es01
-    - bootstrap.memory_lock=true
-    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-  volumes:
-    - data01:/usr/share/elasticsearch/data
-  ports:
-    - 9200:9200
-  networks:
-    - elastic
+    container_name: elasticsearch_test
+    environment:
+      - node.name=es01
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
 
 #  one-shot_service_python:
 #    container_name: one-shot_service_python
 #    image: python:latest
 
 volumes:
-  elasticsearch
+  elasticsearch:
 
 networks:
   elastic:
