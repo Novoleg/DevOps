@@ -17,6 +17,8 @@ services:
 
   one-shot_service_python:
     container_name: one-shot_service_python
+    depends_on:
+      - elasticsearch_test
     image: local/python_elasticsearch
     networks:
       - elastic
