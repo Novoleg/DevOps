@@ -15,9 +15,12 @@ services:
     networks:
       - elastic
 
-#  one-shot_service_python:
-#    container_name: one-shot_service_python
-#    image: python:latest
+  one-shot_service_python:
+    container_name: one-shot_service_python
+    image: local/python_elasticsearch
+    networks:
+      - elastic
+
 
 volumes:
   elasticsearch:
