@@ -5,7 +5,7 @@ services:
     container_name: one-shot_service_python
     depends_on:
       - elasticsearch_test
-    command: sh -c 'sleep 5 && python3 main.py'
+    command: sh -c 'sleep 10 && python3 main.py'
 
     image: local/python_elasticsearch
     networks:
