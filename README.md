@@ -6,7 +6,7 @@
 
 ## Запуск
 1. Склонировать проект
-2. Перейти в директорию OneShotService в файле main.py поменять параметр <your_ip> на ip ваш ip адрес: ```es = Elasticsearch([{'host': '<your_ip>', 'port': 9200}])```
+2. Перейти в директорию OneShotService в файле main.py поменять параметр <your_ip> на ваш ip адрес: ```es = Elasticsearch([{'host': '<your_ip>', 'port': 9200}])```
 3. Затем выполнить команду: ```docker build . -t local/python_elasticsearch```
 4. Затем вернуться в корневую директорию и запустить docker-compose.yml: ```docker-compose up```
 
