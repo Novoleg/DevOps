@@ -6,5 +6,4 @@ RUN pip3 install -r requirements.txt && \
     apk add --no-cache wget && \
     apk add --no-cache openssh && \
     apk add --no-cache bash
-CMD sleep 10
 CMD python3 main.py
