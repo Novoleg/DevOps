@@ -5,7 +5,7 @@ services:
     container_name: one-shot_service_python
     depends_on:
       - elasticsearch_test
-    command: sh -c './wait-for 192.168.100.7:9200' && python3 main.py # ожидаем
+    command: sh -c './wait-for 192.168.100.7:9200 -- python3 main.py' # ожидаем
 
     image: local/python_elasticsearch
     networks:
