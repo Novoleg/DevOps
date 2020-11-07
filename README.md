@@ -4,6 +4,10 @@
 1. Один с сервисом elasticsearch
 2. Второй с python скриптом для заполнения индекса в elasticsearch
 
+## Подготовка ОС Linux (Ubuntu)
+Чтобы запустить данный проект необходимо установить docker engine и docker-compose
+ссылка для установки: https://docs.docker.com/engine/install/ubuntu/
+
 ## Запуск
 1. Склонировать проект
 2. Перейти в директорию OneShotService в файле main.py поменять параметр <your_ip> на ваш ip адрес: ```es = Elasticsearch([{'host': '<your_ip>', 'port': 9200}])```
